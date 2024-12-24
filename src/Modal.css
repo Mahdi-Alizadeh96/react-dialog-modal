@@ -1,0 +1,69 @@
+.modal {
+    all: unset;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    top: 0;
+    display: none;
+    right: 0;
+
+    &.open {
+        display: flex;
+        animation: showModal 0.2s forwards;
+    }
+
+    &.close {
+        animation: closeModal 0.2s forwards;
+    }
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 1rem;
+        padding-top: 2rem;
+        max-width: 1500px;
+        min-width: 500px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .closeIcon {
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+}
+
+@keyframes showModal {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
