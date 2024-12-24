@@ -1,0 +1,31 @@
+{
+    "name": "react-dialog-modal",
+    "version": "0.1.0",
+    "description": "A customizable modal for React",
+    "main": "dist/Modal.js",
+    "module": "dist/Modal.esm.js",
+    "types": "dist/Modal.d.ts",
+    "repository": "https://github.com/Mahdi-Alizadeh96/react-dialog-modal.git",
+    "scripts": {
+        "build": "tsc && babel src --out-dir dist --extensions \".ts,.tsx\"",
+        "postbuild": "cp src/Modal.css dist/",
+        "prepare": "npm run build"
+    },
+    "peerDependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.26.4",
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.26.0",
+        "@babel/preset-react": "^7.26.3",
+        "@babel/preset-typescript": "^7.26.0",
+        "@types/react": "^18.3.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "typescript": "^4.9.5"
+    },
+    "author": "https://github.com/Mahdi-Alizadeh96",
+    "license": "MIT"
+}
